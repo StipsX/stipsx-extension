@@ -1,0 +1,311 @@
+/*
+Copyright 2021-PRESENT StipsX
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,700&family=Rubik:wght@512&display=swap');
+
+body {
+    font-family: 'Arimo', sans-serif;
+    direction: rtl;
+    border: 2px solid white; /* to fix some bug in google chrome idk */
+}
+
+@keyframes expandBorder {
+  from {
+    box-shadow: 0 0 0 0px transparent;
+  }
+
+  to {
+    box-shadow: 0 0 0 5px #ececec;
+  }
+}
+
+@keyframes collapseBorder {
+  from {
+    box-shadow: 0 0 0 5px #ececec;
+  }
+
+  to {
+    box-shadow: 0 0 0 0px transparent;
+  }
+}
+
+body {
+  background-color: #f6f6f6;
+  width: 270px;
+}
+
+body>* {
+  box-sizing: border-box;
+}
+
+header {
+  background: linear-gradient(140deg, var(--color5) 0%, var(--color6) 100%);
+  width: 100%;
+  height: 90px;
+  display: block;
+  position: relative;
+}
+
+#contactLink {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.appIconContainer {
+  background-color: #f6f6f6;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+  border-radius: 100px;
+  position: absolute;
+  bottom: -50%;
+  right: 50%;
+  margin: 0 -40px 0 0;
+}
+
+.appIconContainer #appIcon {
+  width: 70px;
+  border-radius: 100px;
+}
+
+.appTitle {
+  padding-top: 50px;
+  padding-bottom: 10px;
+  width: 100%;
+  color: #3c3c3c;
+  text-align: center;
+  font-weight: 700;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+#popupBody {
+  padding: 20px;
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+
+.themesMenuContainer {
+  border-bottom: 1px solid #d4d4d4;
+  box-shadow: 0px 4px 10px 0 #0000000a;
+}
+
+.themesHeader {
+  color: #ffffff;
+  padding: 13px;
+  font-weight: 700;
+  font-size: 15px;
+  background: linear-gradient(135deg, var(--color5), var(--color6));
+}
+#themesContainer {
+  background-color: #fbfbfb;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row-reverse;
+
+}
+
+.colorPalette.selectedPalette {
+  box-shadow: 0 0 0px 5px #d9d9d9;
+  outline: 2px solid #d9d9d9;
+}
+
+.colorPalette {
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  border-radius: 100%;
+  margin: 6px;
+  background: linear-gradient(135deg, var(--color5) 30%, var(--color6) 70%);
+}
+
+.colorPalette:not(.selectedPalette) {
+  animation: 0.175s ease-in-out forwards collapseBorder;
+}
+
+.colorPalette:not(.selectedPalette):hover {
+  animation: 0.175s ease-in-out forwards expandBorder;
+}
+
+.themesOption {
+  background-color: #eeeeee;
+  font-size: 14px;
+  font-weight: 700;
+  color: #3c3c3c;
+  padding: 5px 10px 5px 10px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.themesOption:nth-child(1) {
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.themesOptionsContainer label {
+  width: 100%;
+  height: fit-content;
+}
+
+input[type='checkbox'] {
+  width: 14px !important;
+  height: 14px !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  font-size: 10px;
+  background: rgb(210, 210, 210);
+  padding: 12px;
+  position: relative;
+  border-radius: 10px;
+}
+
+input[type='checkbox']:checked {
+  position: relative;
+  background: var(--color5);
+}
+input[type='checkbox']:not(:checked):after {
+  content: 'O';
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  color: rgb(161, 161, 161);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+input[type='checkbox']:checked:after {
+  content: '✔';
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  color: white;
+  color: var(--color4);
+  font-size: 13px;
+}
+
+footer {
+  background-color: #eaeaea;
+  color: #787878;
+  padding: 15px;
+  font-size: 13px;
+  text-align: center;
+}
+
+a#creatorCredit:link,
+a#creatorCredit:hover,
+a#creatorCredit:active,
+a#creatorCredit:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+a#creatorCredit:active,
+a#creatorCredit:hover {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* DARKMODE */
+@keyframes expandBorderDark {
+  from {
+    box-shadow: 0 0 0 0px transparent;
+  }
+
+  to {
+    box-shadow: 0 0 0 5px var(--color21);
+  }
+}
+
+@keyframes collapseBorderDark {
+  from {
+    box-shadow: 0 0 0 5px var(--color21);
+  }
+
+  to {
+    box-shadow: 0 0 0 0px transparent;
+  }
+}
+
+body[darkmode] {
+  background-color: var(--color1);
+}
+
+body[darkmode] .appIconContainer {
+  background-color: var(--color1);
+}
+
+body[darkmode] #contactLink svg{
+  fill: var(--color1);
+}
+
+body[darkmode] .appTitle {
+  color: var(--color35);
+  border-bottom: 1px solid var(--color2);
+}
+
+
+body[darkmode] .themesMenuContainer {
+  border-bottom: 1px solid var(--color2);
+  box-shadow: 0px 4px 10px 0 #0000003a;
+}
+
+body[darkmode] .themesHeader {
+  color: var(--color4);
+}
+
+body[darkmode] #themesContainer {
+  background-color: var(--color2);
+}
+
+body[darkmode] .colorPalette.selectedPalette {
+  box-shadow: 0 0 0px 5px var(--color1);
+  outline: 2px solid var(--color1);
+}
+body[darkmode] input[type='checkbox']:not(:checked) {
+  background-color: var(--color2);
+}
+
+body[darkmode] .colorPalette:not(.selectedPalette) {
+  animation: 0.175s ease-in-out forwards collapseBorderDark;
+}
+body[darkmode] .colorPalette:not(.selectedPalette):hover {
+  animation: 0.175s ease-in-out forwards expandBorderDark;
+}
+
+body[darkmode] .themesOption {
+  background-color: var(--color21);
+  color: var(--color35);
+}
+
+body[darkmode] .themesOption:nth-child(1) {
+  border-bottom: 1px solid var(--color2);
+}
+
+
+body[darkmode] footer {
+  background-color: var(--color2);
+  color: var(--color3);
+}

@@ -1,0 +1,1370 @@
+/*
+Copyright 2021-PRESENT StipsX
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+/* scrollbars */
+*::-webkit-scrollbar {
+    width: 14px;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color2) var(--color3);
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--color2);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--color3);
+    border-radius: 6px;
+    border: none;
+}
+
+
+/* override custom nick names animation */
+
+@-webkit-keyframes platform-admin-nickname-color {
+
+    0%,
+    10% {
+        color: var(--color3)
+    }
+
+    100% {
+        color: var(--color5)
+    }
+}
+
+@keyframes platform-admin-nickname-color {
+
+    0%,
+    10% {
+        color: var(--color3)
+    }
+
+    100% {
+        color: var(--color5)
+    }
+}
+
+@-webkit-keyframes special-rank-nickname-color {
+
+    0%,
+    10% {
+        color: var(--color3)
+    }
+
+
+    100% {
+        color: var(--color6)
+    }
+}
+
+@keyframes special-rank-nickname-color {
+
+    0%,
+    10% {
+        color: var(--color3)
+    }
+
+    100% {
+        color: var(--color6)
+    }
+}
+
+/* background */
+
+html,
+body {
+    background-color: var(--color1) !important;
+    animation: hueRainbow 15s linear 0s infinite normal;
+}
+
+/* screen loading rotating wheel*/
+
+.mat-progress-spinner.mat-accent circle,
+.mat-spinner.mat-accent circle {
+    stroke: var(--color5) !important;
+}
+
+/* content loading 3 circles animation */
+
+app-spinner.loading-spinner div.bounce div {
+    background-color: var(--color5) !important;
+}
+
+/* tool bar */
+
+.navigation-topbar mat-toolbar {
+    background-color: var(--color5) !important;
+}
+
+/* unlogged user toolbar options */
+mat-toolbar .login.mat-button .mat-button-wrapper {
+    color: var(--color4) !important;
+}
+
+.navigation-topbar .join-buttons-area .top-navbar-button.signup {
+    background-color: var(--color4) !important;
+    color: var(--color5) !important;
+}
+
+/* unlogged signup menu */
+app-login-signup .screen-content-container {
+    background: var(--color1) !important;
+}
+
+.login-signup-screen .login-signup-form .input-announcement .title,
+.register-login-announcement .text,
+.register-login-announcement.signup a {
+    color: var(--color35) !important;
+}
+
+.login-signup-screen .login-signup-form .input-announcement .caption {
+    color: var(--color3) !important;
+}
+
+.login-signup-screen .login-signup-form .mat-form-field-underline {
+    background-color: var(--color2) !important;
+}
+
+.login-signup-screen .login-signup-form .submit-button,
+.login-signup-screen .login-signup-form app-button-submit button {
+    color: var(--color4) !important;
+}
+
+.login-signup-screen .login-signup-form .submit-button[disabled],
+.login-signup-screen .login-signup-form app-button-submit button[disabled] {
+    background-color: var(--color2) !important;
+    color: var(--color3) !important;
+}
+
+.confirm-dialog .confirm-form .submit-button {
+    color: var(--color4) !important;
+}
+
+.login-signup-screen .login-signup-form .mat-form-field-label {
+    color: var(--color3) !important;
+}
+
+.login-signup-screen .login-signup-form .mat-form-field.mat-focused .mat-form-field-label {
+    color: var(--color5) !important;
+}
+
+.login-signup-screen .login-signup-form .input-email,
+.login-signup-screen .login-signup-form .input-password {
+    color: var(--color35) !important;
+}
+
+.login-signup-screen .login-signup-form .input-email:focus,
+.login-signup-screen .login-signup-form .input-password:focus,
+.register-login-announcement a .mat-button-wrapper {
+    color: var(--color4) !important;
+}
+
+.register-login-announcement .password-reset-link a {
+    color: var(--color3) !important;
+}
+
+.login-signup-screen .login-signup-form .input-announcement {
+    color: var(--color3) !important;
+}
+
+.login-signup-screen .login-signup-form .input-announcement+div .submit-button {
+    background-color: var(--color5) !important;
+    color: var(--color4) !important;
+}
+
+/* "successful login" window */
+.login-success-screen .trigger {
+    background-color: var(--color5) !important;
+}
+
+.login-success-screen .user-avatar .nickname,
+.login-success-screen .user-avatar .nickname .success-msg,
+.login-success-screen .button {
+    color: var(--color4) !important;
+}
+
+.login-success-screen .button {
+    border-color: var(--color4) !important;
+}
+
+.login-success-screen .checkmark {
+    border-color: var(--color4) !important;
+}
+
+/* forgotten password panel */
+app-reset-password {
+    background-color: var(--color1) !important;
+}
+
+app-reset-password .text-message {
+    color: var(--color3) !important;
+}
+
+app-reset-password app-button-submit button.mat-raised-button.mat-primary {
+    background-color: var(--color5) !important;
+    color: var(--color4) !important;
+}
+
+/* new notification circle*/
+.navigation-topbar .count-badge {
+    background-color: var(--colorE) !important;
+    box-shadow: 0 0 0 1px var(--color4) !important;
+    color: var(--color4) !important;
+}
+
+/* toolbar icons */
+
+.navigation-topbar mat-toolbar button.mat-icon-button {
+    color: var(--color4) !important;
+}
+
+/* ------------------------------------------ */
+
+/* ----------------HOMEPAGE------------------ */
+
+/* ------------------------------------------ */
+
+/* topic headers - hot questions, etc */
+
+a.section-title-lable {
+    color: var(--color3) !important;
+}
+
+div.section-title-line {
+    background-color: var(--color2) !important;
+}
+
+/* questions' titles */
+
+.items-box.theme-four-on-one .items-box-item .item-card a.content-container,
+.item-card a.content {
+    color: var(--color35) !important;
+}
+
+/* .items-box.theme-four-on-one .items-box-item .item-card:hover a.content-container,
+.item-card:hover a.content {
+    color: var(--color4) !important;
+} */
+
+/* questions' authors & time */
+
+.item-card .profile-area .item-profile .name,
+.item-card .profile-area .item-profile .time,
+.item-card .profile-area .item-profile .name a {
+    color: var(--color3) !important;
+}
+
+/* questions' pins & comments count */
+
+.info-icons {
+    color: var(--color3) !important;
+}
+
+/* questions' background*/
+
+.items-box.theme-four-on-one .items-box-item .item-card .content-container .title-wrapper,
+.items-box.theme-four-on-one .items-box-item.theme-small-circle-image:nth-of-type(n+1) .item-card .item-image,
+.items-box.theme-four-on-one .items-box-item .item-card,
+.item-card {
+    background: var(--color2) !important;
+}
+
+.items-box.theme-four-on-one .items-box-item.theme-small-circle-image .item-card .item-image-border {
+    display: none;
+}
+
+.item-card .bottom {
+    background: var(--color21) !important;
+}
+
+/* questions' boxes animations */
+
+.items-box.theme-four-on-one .items-box-item .item-card:hover {
+    animation: 0.175s ease-in-out forwards scaleUp;
+}
+
+.items-box.theme-four-on-one .items-box-item .item-card {
+    animation: 0.175s ease-in-out forwards scaleDown;
+}
+
+/* ------------------------------------------ */
+
+/* ---------------SIDE-MENU------------------ */
+
+/* ------------------------------------------ */
+
+.navigation-menu {
+    background: linear-gradient(140deg, var(--color5) 0%, var(--color6) 100%) !important;
+}
+
+.navigation-menu .profile-area .nickname,
+.mat-icon,
+.navigation-menu ul.navigation-links li a,
+.navigation-menu .top-bar .buttons a,
+.navigation-menu ul.navigation-links li a.active-link {
+    color: var(--color4) !important;
+    fill: var(--color4) !important;
+}
+
+/* ---------------SEARCH-BAR----------------- */
+.search-navbar-form {
+    background-color: var(--color2) !important;
+}
+
+#appSearchNavbarSearchFieldInput {
+    color: var(--color4) Im !important;
+}
+
+#appSearchNavbarSearchFieldInput::placeholder {
+    color: var(--color3) !important;
+}
+
+/* results */
+.mat-autocomplete-panel {
+    background-color: var(--color2) !important;
+}
+
+.mat-autocomplete-panel .mat-option {
+    color: var(--color3) !important;
+}
+
+.mat-autocomplete-panel .mat-option.mat-active {
+    background-color: var(--color21) !important;
+    color: var(--color35) !important;
+}
+
+/* hover results animation */
+.mat-autocomplete-panel .mat-option :hover {
+    animation: 0.175s ease-in-out forwards scaleUp;
+}
+
+.mat-autocomplete-panel .mat-option {
+    animation: 0.175s ease-in-out forwards scaleDown;
+}
+
+/* ------------------------------------------ */
+
+/* ---------------PEN-FRIENDS---------------- */
+
+/* ------------------------------------------ */
+
+/* toolbar title */
+.navigation-topbar.has-title-theme mat-toolbar .box.text-title {
+    color: var(--color4) !important;
+}
+
+/* the online circle arround users' pic */
+
+app-profile-avatar .profile-avater-img-container.online:not(.online-theme-white) {
+    border-color: var(--color5) !important;
+}
+
+/* message box */
+
+.item-card {
+    background: var(--color2) !important;
+    color: var(--color35) !important;
+}
+
+/* .item-card a.content-container:hover,
+.item-card a.content:hover {
+    color: var(--color4) !important;
+} */
+
+/* bottom box */
+
+.item-card .bottom {
+    background: var(--color21) !important;
+}
+
+/* author & time */
+
+app-item-profile .item-profile .name a.profile_link,
+app-item-profile .item-profile .time {
+    color: var(--color3) !important;
+}
+
+/* message box animation */
+
+.item-card:hover {
+    animation: 0.175s ease-in-out forwards scaleUp;
+}
+
+.item-card {
+    animation: 0.175s ease-in-out forwards scaleDown;
+}
+
+/* floating message icon */
+.mat-fab.mat-accent,
+.mat-flat-button.mat-accent,
+.mat-mini-fab.mat-accent,
+.mat-raised-button.mat-accent {
+    background-color: var(--color6) !important;
+}
+
+/* write new message box*/
+
+.add-response-area .item-card {
+    background-color: var(--color2) !important;
+    animation: none;
+}
+
+.add-response-area .item-card .bottom {
+    background-color: var(--color21) !important;
+}
+
+div.add-item-profile>div.user-nickname {
+    color: var(--color3) !important;
+}
+
+.form-area .textarea-area textarea {
+    background-color: inherit;
+    color: var(--color35) !important;
+}
+
+.form-area .textarea-area textarea::placeholder {
+    color: var(--color3) !important;
+}
+
+.modui.form-error {
+    color: var(--colorE) !important;
+}
+
+/* the "wait to publish another message" page */
+app-blocked-action-dialog {
+    background: linear-gradient(140deg, var(--color5) 0%, var(--color6) 100%) !important;
+}
+
+app-blocked-action-dialog .msg.textMessage,
+app-blocked-action-dialog .go-back-button button.mat-raised-button.mat-accent{
+    color: var(--color4) !important;
+}
+
+/* ------------------------------------------ */
+
+/* ---------------MESSAGES PAGE-------------- */
+
+/* ------------------------------------------ */
+
+/* header */
+
+body mat-tab-group.mat-tab-group.toolbar-tab-group .mat-tab-header {
+    background-color: var(--color5) !important;
+}
+
+body mat-tab-group.mat-tab-group.toolbar-tab-group .mat-tab-label {
+    color: var(--color4) !important;
+}
+
+/* new message circle new chats */
+.list-message.new .new-count {
+    background-color: var(--color5) !important;
+    color: var(--color4) !important;
+}
+
+/* bg */
+
+.messages-list,
+app-messages .mat-tab-body-wrapper {
+    background-color: var(--color1) !important;
+}
+
+.list-message {
+    border-color: var(--color2) !important;
+    color: var(--color35) !important;
+}
+
+/* msg content & time */
+
+.list-message .text,
+.list-message .time {
+    color: var(--color3) !important;
+}
+
+/* message box animation */
+
+.list-message:hover {
+    animation: 0.175s ease-in-out forwards scaleUp;
+}
+
+.list-message {
+    animation: 0.175s ease-in-out forwards scaleDown;
+}
+
+/* ------------------ contacts -------------- */
+
+/* search bar */
+
+.mat-toolbar {
+    background-color: var(--color21) !important;
+}
+
+.second-navbar .search-area.active {
+    background-color: var(--color2) !important;
+}
+
+.contacts-list {
+    background-color: var(--color1) !important;
+}
+
+.second-navbar .online-now-filter {
+    color: var(--color3) !important;
+}
+
+.second-navbar .search-area input {
+    color: var(--color4) !important;
+}
+
+.second-navbar .search-area input::placeholder {
+    color: var(--color3) !important;
+}
+
+
+.mat-slide-toggle-thumb {
+    background-color: var(--color3) !important;
+}
+
+.mat-slide-toggle.mat-primary.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+    background-color: var(--color5) !important;
+}
+
+.second-navbar .online-now-filter mat-slide-toggle.active {
+    color: var(--color5) !important;
+}
+
+.mat-slide-toggle-bar {
+    background-color: var(--color2);
+}
+
+.mat-slide-toggle.mat-primary.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+    background-color: var(--color5) !important;
+}
+
+/* contacts nicks */
+
+.contacts-list .list-contact .nickname {
+    color: var(--color35) !important;
+}
+
+/* ------------------------------------------ */
+
+/* ---------------NOTIFICATIONS-------------- */
+
+/* ------------------------------------------ */
+
+.notifications-list {
+    background-color: var(--color1) !important;
+}
+
+.notifications-list .notification {
+    border-color: var(--color2) !important;
+}
+
+.notifications-list .notification .desktop-time,
+.notifications-list .notification .time,
+.notifications-list .notification .msg {
+    color: var(--color3) !important;
+}
+
+.notifications-list .notification .msg em {
+    color: var(--color6) !important;
+}
+
+.notifications-list .notification .msg cite {
+    color: var(--color35) !important;
+}
+
+.notifications-list .notification .msg .system-msg {
+    background-color: var(--color21) !important;
+    color: var(--color35) !important;
+    box-shadow: 1px 1px 2px 0 var(--color2);
+}
+
+.notifications-list .notification .msg .system-msg .points-msg {
+    color: var(--color3) !important;
+}
+
+.notifications-list .notification .msg .system-msg {
+    box-shadow: 1px 2px 0 var(--color2) !important;
+}
+
+
+/* ------------------------------------------ */
+
+/* --------PRIVATE CHATS (WITH SOMEONE)------ */
+
+/* ------------------------------------------ */
+
+/* bg */
+
+app-messages .message-area {
+    background-color: var(--color1) !important;
+}
+
+/* top toolbar */
+
+.mat-toolbar.mat-primary {
+    background-color: var(--color5) !important;
+}
+
+.messages-toolbar .user-nickname {
+    color: var(--color4) !important;
+}
+
+app-profile-avatar .profile-avater-img-container.online.online-theme-white {
+    border-color: var(--color4);
+}
+
+/* date marks */
+.chat-messages-list .date-line .text {
+    color: var(--color3) !important;
+}
+
+/* input message bottom box */
+
+.message-bar {
+    background-color: var(--color2) !important;
+    border-color: var(--color21) !important;
+}
+
+.message-bar textarea {
+    background-color: inherit !important;
+    color: var(--color35) !important;
+}
+
+.message-bar textarea::placeholder {
+    color: var(--color3) !important;
+}
+
+.emoji-select-button {
+    background-color: inherit !important;
+    color: var(--color3) !important;
+}
+
+/* emoji box (expended) */
+
+.emoji-selector .categories .mat-tab-header {
+    background-color: var(--color1) !important;
+    border-color: var(--color2) !important;
+}
+
+.emoji-selector {
+    background-color: var(--color21) !important;
+}
+
+/* selected emoji section bottom border*/
+
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: var(--color5) !important;
+}
+
+/* 2nd side messages */
+
+.chat-message-area .chat-message .msg-content {
+    background-color: var(--color2) !important;
+    color: var(--color35) !important;
+}
+
+.chat-message-area .chat-message .msg-content .msg-content-timestamp {
+    color: var(--color3) !;
+}
+
+/* 1st side messages */
+.chat-message-area.user-msg .chat-message .msg-content {
+    background-color: var(--color6) !important;
+    color: var(--color4) !important;
+}
+
+.chat-message-area.user-msg .chat-message .msg-content .msg-content-timestamp {
+    color: var(--color4) !important;
+}
+
+/* block confirm button */
+.mat-fab.mat-primary:not(),
+.mat-flat-button.mat-primary:not(),
+.mat-mini-fab.mat-primary:not(),
+.mat-raised-button.mat-primary:not() {
+    background-color: var(--color5) !important;
+}
+
+/* report box */
+.mat-form-field .mat-select.mat-select-invalid .mat-select-arrow,
+.mat-form-field.mat-focused.mat-warn .mat-select-arrow {
+    color: var(--colorE) !important;
+}
+
+.mat-form-field.mat-form-field-invalid .mat-form-field-ripple {
+    color: var(--colorE) !important;
+}
+
+.mat-form-field.mat-form-field-invalid .mat-form-field-label,
+.mat-form-field.mat-form-field-invalid .mat-form-field-label .mat-form-field-required-marker,
+.mat-form-field.mat-form-field-invalid .mat-form-field-label.mat-accent {
+    color: var(--colorE) !important;
+}
+
+.mat-select-content,
+.mat-select-panel-done-animating {
+    background-color: var(--color21) !important;
+    color: var(--color35) !important;
+}
+
+.mat-option {
+    color: var(--color35) !important;
+}
+
+.mat-select-value {
+    color: var(--color4);
+}
+
+.mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+    color: var(--color5) !important;
+}
+
+/* user matrid warning */
+.report-user-advice {
+    background-color: var(--colorE) !important;
+    color: var(--color4) !important;
+}
+
+.report-user-advice .mat-button-wrapper {
+    color: var(--color4) !important;
+}
+
+/* ------------------------------------------ */
+
+/* --------------QUESTIONS PAGE-------------- */
+
+/* ------------------------------------------ */
+
+/* the sub-toolbar */
+
+body mat-tab-group.mat-tab-group.second-navbar-tab-group .mat-tab-header {
+    background: var(--color5) !important;
+}
+
+
+.second-navbar .second-navbar-tab-group a {
+    color: var(--color4) !important;
+}
+
+/* sub-sub toolbar for the hot questions */
+.second-navbar .filter-sections {
+    background-color: var(--color2);
+}
+
+.second-navbar .filter-sections a {
+    color: var(--color35) !important;
+}
+
+/* the options drawr for self-asked questions' options */
+.mat-menu-panel {
+    background-color: var(--color2) !important;
+}
+
+.mat-menu-panel .mat-menu-item {
+    color: var(--color3) !important;
+}
+
+.mat-menu-item-highlighted:not(),
+.mat-menu-item.cdk-keyboard-focused:not(),
+.mat-menu-item.cdk-program-focused:not(),
+.mat-menu-item:hover:not() {
+    background-color: var(--color21) !important;
+}
+
+/* the 'report' box */
+.mat-dialog-container {
+    background-color: var(--color2) !important;
+}
+
+.confirm-dialog {
+    color: var(--color35) !important;
+}
+
+.report-send-dialog textarea {
+    color: var(--color35) !important;
+}
+
+.mat-input-element {
+    /* changes cursor color on inputs */
+    caret-color: var(--color5) !important;
+}
+
+.report-send-dialog textarea:focus {
+    color: var(--color4) !important;
+}
+
+label.mat-form-field-label {
+    color: var(--color3) !important;
+}
+
+.mat-form-field-underline {
+    background-color: var(--color1) !important;
+}
+
+.mat-focused .mat-form-field-underline .mat-form-field-ripple {
+    background-color: var(--color5) !important;
+}
+
+.mat-form-field-invalid .mat-form-field-underline .mat-form-field-ripple {
+    background-color: var(--colorE) !important;
+}
+
+.cancel-button {
+    color: var(--color3) !important;
+}
+
+.report-send-dialog .submit-button {
+    background-color: var(--color21);
+    color: var(--color3) !important;
+}
+
+.report-send-dialog .submit-button:not() {
+    background-color: var(--color5) !important;
+    color: var(--color4) !important;
+}
+
+.report-send-dialog mat-error {
+    color: var(--colorE) !important;
+}
+
+/* ------------------------------------------ */
+
+/* ---------QUESTIONS' CHANNELS' PAGES------- */
+
+/* ------------------------------------------ */
+
+/* header */
+.channel-top-unit .channel-name {
+    color: var(--color4) !important;
+}
+
+.channel-background-image,
+.item-channel-link {
+    color: var(--color4) !important;
+}
+
+/* sub-toolbar */
+.channel-top-unit .unit-bottom .second-navbar-tab-group {
+    border-color: var(--color2) !important;
+}
+/* sub-sub-toolbar (for hot questions in this topic) */
+body .channel-top-unit mat-tab-group.mat-tab-group.second-navbar-tab-group .mat-tab-header {
+    background-color: var(--color2) !important;
+}
+
+.filter-sections {
+    background-color: var(--color2) !important;
+}
+
+.filter-sections .mat-ink-bar {
+    box-shadow: inset 0px 0px 0px 10px var(--color5) !important;
+}
+
+.channel-top-unit[_ngcontent-c18] .mat-tab-header a:link,
+.channel-top-unit[_ngcontent-c18] .mat-tab-header a:hover,
+.channel-top-unit[_ngcontent-c18] .mat-tab-header a:active,
+.channel-top-unit[_ngcontent-c18] .mat-tab-header a:visited {
+    color: var(--color4) !important;
+}
+
+/* site toolbar (appears when scrolling down) */
+.app-navbar-replace:not(.hide-text),
+.channel-top-unit .navbar-background-animated-fill,
+.channel-top-unit-navbar-background {
+    background-color: var(--color5) !important;
+}
+
+
+/* ------------------------------------------ */
+
+/* -----------QUESTION VIEW WINDOW----------- */
+
+/* ------------------------------------------ */
+
+/* bg */
+.item-screen-content-below-card {
+    background-color: var(--color1) !important;
+}
+
+/* topics */
+.page-item-card .topics .list .topic {
+    background-color: var(--color1) !important;
+    color: var(--color3) !important;
+}
+
+/* desc */
+.page-item-card .text-content {
+    background-color: var(--color2) !important;
+    color: var(--color4) !important;
+}
+
+.item-links a {
+    color: var(--color5) !important;
+}
+
+/* question meta data */
+.page-item-card .bottom {
+    background-color: var(--color21) !important;
+}
+
+.item-profile .name,
+.item-profile .time,
+.page-item-card .pin-area .pin-count,
+.page-item-card .pin-area button {
+    color: var(--color3) !important;
+}
+
+.page-item-card .pin-area button {
+    background-color: transparent !important;
+}
+
+.page-item-card .pin-area.pinned button {
+    color: var(--color5) !important;
+}
+
+/* comments  count*/
+.response-count-title {
+    color: var(--color3) !important;
+}
+
+/* comments */
+.item-screen-content-below-card app-item-list .item-card {
+    animation: none !important;
+}
+
+.score {
+    color: var(--color3) !important;
+}
+
+.no-results-msg {
+    color: var(--color35) !important;
+}
+
+/* notifications enabled */
+.mat-menu-panel.active-menu-item-theme .active-menu-item-content,
+.mat-menu-panel.active-menu-item-theme .active-menu-item-content .mat-icon {
+    color: var(--color5) !important;
+}
+
+.mat-snack-bar-container.success-snack-bar {
+    background-color: var(--color5) !important;
+    color: var(--color4) !important;
+}
+
+/* share icons */
+.social-sharing-area .share-button.twitter {
+    background-color: #1da1f2 !important;
+}
+
+.social-sharing-area .share-button.facebook {
+    background: radial-gradient(ellipse farthest-corner at center, #4267b2 30%, #3b5c9f 100%) !important;
+}
+
+.social-sharing-area .share-button.copy {
+    background-color: #999 !important;
+}
+
+.cdk-overlay-pane.no-padding-panel .mat-dialog-container {
+    background: none !important;
+}
+
+/* image credit */
+.confirm-dialog .message a {
+    color: var(--color6) !important;
+}
+
+/* edits history */
+.mat-toolbar.mat-primary {
+    color: var(--color4) !important;
+
+}
+
+app-item-revisions-dialog {
+    background-color: var(--color1) !important;
+}
+
+.item-card .text-content {
+    background-color: var(--color2) !important;
+}
+
+.revision-status {
+    color: var(--color3) !important;
+}
+
+.item-card .topics .topic {
+    background-color: var(--color21) !important;
+    color: var(--color3) !important;
+}
+
+/* comments' vote icons*/
+.voteButton .voteIcon {
+    color: var(--color35) !important;
+}
+
+.voteButton.selected .voteIcon.up {
+    color: var(--color5) !important;
+}
+
+.voteButton.selected .voteIcon.down {
+    color: var(--color6) !important;
+}
+
+/* related questions panel */
+.feed-container .topic-area .section-title .section-title-lable {
+    color: var(--color3) !important;
+}
+
+/* related questions boxes */
+.items-box.theme-two-column-squares .items-box-item .item-card .content-container .title-wrapper {
+    background-color: var(--color2) !important;
+    color: var(--color35) !important;
+}
+
+.items-box.theme-two-column-squares .items-box-item .item-card .content-container .title-wrapper .info-icons {
+    color: var(--color35) !important;
+}
+
+/* ------------------------------------------ */
+
+/* ---------------NEW QUESTION--------------- */
+
+/* ------------------------------------------ */
+
+/* header */
+.action-buttons .go-to-next-step {
+    color: var(--color4) !important;
+}
+
+.item-channel-title {
+    border-color: var(--color2) !important;
+    color: var(--color3) !important;
+}
+
+/* bg */
+.add-ask-screen,
+.mat-card-content,
+.mat-card-content textarea,
+.form-user-profile .anonymous-nickname input {
+    background-color: var(--color1);
+    color: var(--color3) !important;
+}
+
+.mat-card-content textarea::placeholder {
+    color: var(--color3) !important;
+}
+
+.mat-card-content textarea {
+    color: var(--color35) !important;
+}
+
+.mat-card-content textarea:focus {
+    color: var(--color4) !important;
+}
+
+/* add link */
+.mat-error {
+    color: var(--colorE) !important;
+}
+
+/* ------------------------------------------ */
+
+/* ---------------USER PROFILE--------------- */
+
+/* ------------------------------------------ */
+
+/* bg */
+.profile-avatar-card .background {
+    background-color: var(--color6) !important;
+}
+
+.profile-avatar-card .avatar {
+    border-color: var(--color1) !important;
+    background-color: var(--color1) !important;
+}
+
+.item-editor-card mat-card-actions.submit-area {
+    background-color: var(--color1) !important;
+}
+
+.profile-avatar-card .content,
+app-user-profile .screen-content-container {
+    background-color: var(--color1) !important;
+}
+
+/* stats & nick */
+.profile-avatar-card .nickname {
+    color: var(--color4) !important;
+}
+
+.chip-badge {
+    background-color: var(--color2) !important;
+    color: var(--color3) !important;
+}
+
+.stats-tabs .tab,
+.stats-tabs .tab>div,
+.profile-text-status {
+    color: var(--color3) !important;
+}
+
+.profile-text-status,
+.profile-page-tabs .mat-tab-header {
+    border-color: var(--color2) !important;
+}
+
+.mat-tab-label-content {
+    color: var(--color4) !important;
+}
+
+mat-card-actions button.back mat-icon {
+    color: var(--color35) !important;
+}
+
+.profile-text-status textarea {
+    color: var(--color3) !important;
+}
+
+.profile-text-status textarea:focus {
+    color: var(--color35) !important;
+}
+
+/* activity tab */
+.select-action-area {
+    background-color: var(--color2) !important;
+}
+
+.profile-actions-chart .mat-select-arrow,
+.select-action-area .selectbox-wrap .mat-select-value {
+    color: var(--color35) !important;
+}
+
+.theme-profile-flowers-list .item-title {
+    background-color: var(--color2) !important;
+    color: var(--color35) !important;
+}
+
+/* user stats illustrations */
+canvas,
+.week-actions-chart {
+    filter: var(--canvasFilter);
+}
+
+
+/* activity tab flowers list */
+.profile-actions .actions-title {
+    border-color: var(--color2) !important;
+    color: var(--color3) !important;
+}
+
+/* about tab */
+.profile-about-content {
+    color: var(--color3) !important;
+}
+
+/* ------------------------------------------ */
+
+/* -----------------SETTINGS----------------- */
+
+/* ------------------------------------------ */
+
+/* bg */
+app-settings {
+    background-color: var(--color1) !important;
+}
+
+/* page title */
+app-settings .mat-toolbar.mat-primary {
+    color: var(--color4) !important;
+}
+
+/* options */
+app-settings .action-list li {
+    border-color: var(--color2) !important;
+    color: var(--color4) !important;
+}
+
+/* options' hover animations */
+
+app-settings .action-list li:hover {
+    animation: 0.175s ease-in-out forwards scaleUp;
+}
+
+app-settings .action-list li {
+    animation: 0.175s ease-in-out forwards scaleDown;
+}
+
+/* -----------SETTINGS: CHANGE PIC----------- */
+.upload-photo-screen {
+    color: var(--color4) !important;
+}
+
+app-profile-photo .upload-photo-screen {
+    background-image: linear-gradient(140deg, var(--color5) 0%, var(--color6) 100%) !important;
+}
+
+app-profile-photo .small-title {
+    color: var(--color4) !important;
+}
+
+app-profile-photo .submit-thumbnail-area-mobile .mat-button-wrapper,
+app-profile-photo .submit-thumbnail-area-desktop .mat-button-wrapper {
+    color: var(--color4) !important;
+}
+
+/* -----------SETTINGS: CHANGE ACCOUNT DETAILS----------- */
+app-account-details {
+    background-color: var(--color1) !important;
+}
+
+app-account-details input {
+    color: var(--color35) !important;
+}
+
+app-account-details input:focus {
+    color: var(--color4) !important;
+}
+
+app-account-details .mat-form-field-underline {
+    background-color: var(--color2) !important;
+}
+
+app-account-details .mat-color-secondary-text {
+    color: var(--color5) !important;
+}
+
+app-account-details .mat-select-arrow {
+    color: var(--color3) !important;
+}
+
+app-account-details button {
+    color: var(--color4) !important;
+}
+
+/* -----------SETTINGS: CHANGE PASSWORD----------- */
+
+app-change-password {
+    background-color: var(--color1) !important;
+}
+
+app-change-password .mat-form-field-underline {
+    background-color: var(--color2) !important;
+}
+
+app-change-password input {
+    color: var(--color35) !important;
+}
+
+app-change-password input:active {
+    color: var(--color4) !important;
+}
+
+app-change-password input:-webkit-autofill,
+app-change-password input:-webkit-autofill:hover,
+app-change-password input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--color35);
+    -webkit-box-shadow: 0 0 0px 1000px var(--color1) inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+app-change-password button {
+    color: var(--color4) !important;
+}
+
+/* -----------SETTINGS: ABOUT APP ----------- */
+app-about,
+app-terms,
+app-privacy {
+    background-color: var(--color1) !important;
+}
+
+app-about .action-list li .single-line {
+    color: var(--color3) !important;
+}
+
+app-about .action-list li {
+    border-color: var(--color2) !important;
+}
+
+app-terms,
+app-privacy {
+    color: var(--color3) !important;
+}
+
+app-terms h3,
+app-privacy h3 {
+    color: var(--color35) !important;
+}
+
+app-terms a:link,
+app-terms a:hover,
+app-terms a:visited,
+app-terms a:active,
+app-privacy a:link,
+app-privacy a:hover,
+app-privacy a:visited,
+app-privacy a:active {
+    color: var(--color6) !important;
+}
+
+/* li items animations */
+
+app-about:hover .action-list li:hover {
+    animation: 0.175s ease-in-out forwards scaleUp;
+}
+
+app-about:hover .action-list li {
+    animation: 0.175s ease-in-out forwards scaleDown;
+}
+
+/* -----------SETTINGS: CONTACT US ----------- */
+app-contact-us .page-header {
+    color: var(--color5) !important;
+}
+
+app-contact-us input {
+    background-color: var(--color2) !important;
+}
+
+app-contact-us .form-area .line {
+    border-color: var(--color1) !important;
+}
+
+app-contact-us input,
+app-contact-us textarea {
+    color: var(--color35);
+}
+
+app-contact-us input:focus,
+app-contact-us textarea:focus {
+    color: var(--color4);
+}
+
+app-contact-us button {
+    background-color: var(--color6) !important;
+    color: var(--color4) !important;
+}
+
+/* -----------SETTINGS: DISCONNECT ----------- */
+app-confirm-dialog .mat-raised-button.mat-primary {
+    background-color: var(--color5);
+}

@@ -1,0 +1,59 @@
+/*
+Copyright 2021-PRESENT StipsX
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+/* NOTICE: if a bright theme is chosen; only colors5&6 will be used. */
+:root {
+    --color1: #1b1b1b;
+    --color2: #2c2c2c;
+    --color21: #252525;
+    --color3: #939393;
+    --color35: #d1d1d1;
+    --color4: #ffffff;
+    --color5: #09c286;
+    --color6: #596bd0;
+    --colorE: #f44336;
+    --canvasFilter: "hue-rotate(-231deg) hue-rotate(231deg)";
+    /* DEBUG PALETTE*/
+    /*--color1: #ff0000;
+    --color2: #2bff00;
+    --color21: #00aaff;
+    --color3: #ff00aa;
+    --color35: #551bc8;
+    --color4: #7c1885;
+    --color5: #0f32e3;
+    --color6: #615010;
+    --colorE: #ffff00;*/
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.03);
+    }
+}
+
+@keyframes scaleDown {
+    from {
+        transform: scale(1.03);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}

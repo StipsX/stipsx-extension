@@ -1,0 +1,526 @@
+/*
+Copyright 2021-PRESENT StipsX
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+/* override custom nick names animation */
+
+@-webkit-keyframes platform-admin-nickname-color {
+
+    0%,
+    10% {
+        color: #5e5e5e
+    }
+
+    100% {
+        color: var(--color5)
+    }
+}
+
+@keyframes platform-admin-nickname-color {
+
+    0%,
+    10% {
+        color: #5e5e5e
+    }
+
+    100% {
+        color: var(--color5)
+    }
+}
+
+@-webkit-keyframes special-rank-nickname-color {
+
+    0%,
+    10% {
+        color: #5e5e5e
+    }
+
+
+    100% {
+        color: var(--color6)
+    }
+}
+
+@keyframes special-rank-nickname-color {
+
+    0%,
+    10% {
+        color: #5e5e5e
+    }
+
+    100% {
+        color: var(--color6)
+    }
+}
+
+/* background */
+
+html,
+body {
+
+    animation: hueRainbow 15s linear 0s infinite normal;
+}
+
+/* screen loading rotating wheel*/
+
+.mat-progress-spinner.mat-accent circle,
+.mat-spinner.mat-accent circle {
+    stroke: var(--color5) !important;
+}
+
+/* content loading 3 circles animation */
+
+app-spinner.loading-spinner div.bounce div {
+    background-color: var(--color5) !important;
+}
+
+/* tool bar */
+
+.navigation-topbar mat-toolbar {
+    background-color: var(--color5) !important;
+}
+
+
+/* unlogged user toolbar options */
+
+.navigation-topbar .join-buttons-area .top-navbar-button.signup {
+    color: var(--color5) !important;
+}
+
+.login-signup-screen .login-signup-form .mat-form-field.mat-focused .mat-form-field-label {
+    color: var(--color5) !important;
+}
+
+/* unlogged signup menu */
+.login-signup-screen .login-signup-form .input-announcement+div .submit-button {
+    background-color: var(--color5) !important;
+}
+
+/* "successful login" window */ 
+.login-success-screen .trigger {
+    background-color: var(--color5) !important;
+}
+
+/* forgotten password panel */
+app-reset-password app-button-submit button.mat-raised-button.mat-primary{
+    background-color: var(--color5) !important;
+}
+
+/* ------------------------------------------ */
+
+/* ----------------HOMEPAGE------------------ */
+
+/* ------------------------------------------ */
+
+/* questions' titles */
+.items-box.theme-four-on-one .items-box-item .item-card:hover a.content-container,
+
+/* questions' background*/
+.items-box.theme-four-on-one .items-box-item.theme-small-circle-image .item-card .item-image-border {
+    display: none;
+}
+
+/* questions' boxes animations */
+
+.items-box.theme-four-on-one .items-box-item .item-card:hover {
+    animation: 0.175s ease-in-out forwards scaleUp;
+}
+
+.items-box.theme-four-on-one .items-box-item .item-card {
+    animation: 0.175s ease-in-out forwards scaleDown;
+}
+
+/* ------------------------------------------ */
+
+/* ---------------SIDE-MENU------------------ */
+
+/* ------------------------------------------ */
+
+.navigation-menu {
+    background: linear-gradient(140deg, var(--color5) 0%, var(--color6) 100%) !important;
+}
+
+/* ---------------SEARCH-BAR----------------- */
+/* results */
+/* hover results animation */
+.mat-autocomplete-panel .mat-option :hover {
+    animation: 0.175s ease-in-out forwards scaleUp;
+}
+
+.mat-autocomplete-panel .mat-option {
+    animation: 0.175s ease-in-out forwards scaleDown;
+}
+
+/* ------------------------------------------ */
+
+/* ---------------PEN-FRIENDS---------------- */
+
+/* ------------------------------------------ */
+
+/* the online circle arround users' pic */
+
+app-profile-avatar .profile-avater-img-container.online:not(.online-theme-white) {
+    border-color: var(--color5) !important;
+}
+
+/* message box */
+.item-card a.content-container:hover,
+
+/* message box animation */
+
+.item-card:hover {
+    animation: 0.175s ease-in-out forwards scaleUp;
+}
+
+.item-card {
+    animation: 0.175s ease-in-out forwards scaleDown;
+}
+
+/* floating message icon */
+.mat-fab.mat-accent,
+.mat-flat-button.mat-accent,
+.mat-mini-fab.mat-accent,
+.mat-raised-button.mat-accent {
+    background-color: var(--color6) !important;
+}
+
+/* write new message box*/
+
+.add-response-area .item-card {
+
+    animation: none;
+}
+
+.form-area .textarea-area textarea {
+    background-color: inherit;
+
+}
+/* the "wait to publish another message" page */
+app-blocked-action-dialog {
+    background: linear-gradient(140deg, var(--color5) 0%, var(--color6) 100%) !important;
+}
+
+/* ------------------------------------------ */
+
+/* ---------------MESSAGES PAGE-------------- */
+
+/* ------------------------------------------ */
+
+/* header */
+
+body mat-tab-group.mat-tab-group.toolbar-tab-group .mat-tab-header {
+    background-color: var(--color5) !important;
+}
+
+/* new message circle new chats */
+.list-message.new .new-count {
+    background-color: var(--color5) !important;
+}
+
+/* message box animation */
+
+.list-message:hover {
+    animation: 0.175s ease-in-out forwards scaleUp;
+}
+
+.list-message {
+    animation: 0.175s ease-in-out forwards scaleDown;
+}
+
+/* ------------------ contacts -------------- */
+
+/* search bar */
+.second-navbar .online-now-filter {}
+
+.mat-slide-toggle.mat-primary.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+    background-color: var(--color5) !important;
+}
+
+.second-navbar .online-now-filter mat-slide-toggle.active {
+    color: var(--color5) !important;
+}
+
+.mat-slide-toggle.mat-primary.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+    background-color: var(--color5) !important;
+}
+
+/* ------------------------------------------ */
+
+/* ---------------NOTIFICATIONS-------------- */
+
+/* ------------------------------------------ */
+
+.notifications-list .notification .msg em {
+    color: var(--color6) !important;
+}
+
+/* ------------------------------------------ */
+
+/* --------PRIVATE CHATS (WITH SOMEONE)------ */
+
+/* ------------------------------------------ */
+
+/* top toolbar */
+
+.mat-toolbar.mat-primary {
+    background-color: var(--color5) !important;
+}
+
+/* input message bottom box */
+.message-bar textarea {
+    background-color: inherit !important;
+
+}
+
+.emoji-select-button {
+    background-color: inherit !important;
+
+}
+
+/* selected emoji section bottom border*/
+
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: var(--color5) !important;
+}
+
+/* 1st side messages */
+.chat-message-area.user-msg .chat-message .msg-content {
+    background-color: var(--color6) !important;
+
+}
+
+/* block confirm button */
+.mat-fab.mat-primary:not([disabled]),
+.mat-flat-button.mat-primary:not([disabled]),
+.mat-mini-fab.mat-primary:not([disabled]),
+.mat-raised-button.mat-primary:not([disabled]) {
+    background-color: var(--color5) !important;
+}
+
+/* report box */
+
+.mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+    color: var(--color5) !important;
+}
+
+
+/* ------------------------------------------ */
+
+/* --------------QUESTIONS PAGE-------------- */
+
+/* ------------------------------------------ */
+
+/* the sub-toolbar */
+
+body mat-tab-group.mat-tab-group.second-navbar-tab-group .mat-tab-header {
+    background: var(--color5) !important;
+}
+
+/* the 'report' box */
+.mat-input-element {
+    /* changes cursor color on inputs */
+    caret-color: var(--color5) !important;
+}
+
+.mat-focused .mat-form-field-underline .mat-form-field-ripple {
+    background-color: var(--color5) !important;
+}
+
+.report-send-dialog .submit-button:not([disabled]) {
+    background-color: var(--color5) !important;
+
+}
+
+/* ------------------------------------------ */
+
+/* ---------QUESTIONS' CHANNELS' PAGES------- */
+
+/* ------------------------------------------ */
+
+
+/* sub-sub-toolbar (for hot questions in this topic) */
+body .channel-top-unit mat-tab-group.mat-tab-group.second-navbar-tab-group .mat-tab-header {
+    background-color: var(--color4) !important;
+}
+
+/* site toolbar (appears when scrolling down) */
+.app-navbar-replace:not(.hide-text),
+.channel-top-unit .navbar-background-animated-fill,
+.channel-top-unit-navbar-background {
+    background-color: var(--color5) !important;
+}
+
+
+/* ------------------------------------------ */
+
+/* -----------QUESTION VIEW WINDOW----------- */
+
+/* ------------------------------------------ */
+
+/* desc */
+.item-links a {
+    color: var(--color5) !important;
+}
+
+/* question meta data */
+.item-profile .name,
+.page-item-card .pin-area button {
+    background-color: transparent !important;
+}
+
+.page-item-card .pin-area.pinned button {
+    color: var(--color5) !important;
+}
+
+/* comments */
+.item-screen-content-below-card app-item-list .item-card {
+    animation: none !important;
+}
+
+/* notifications enabled */
+.mat-menu-panel.active-menu-item-theme .active-menu-item-content,
+.mat-menu-panel.active-menu-item-theme .active-menu-item-content .mat-icon {
+    color: var(--color5) !important;
+}
+
+.mat-snack-bar-container.success-snack-bar {
+    background-color: var(--color5) !important;
+
+}
+
+/* share icons */
+.social-sharing-area[_ngcontent-c48] .share-button.twitter[_ngcontent-c48] {
+    background-color: #1da1f2 !important;
+}
+
+.social-sharing-area[_ngcontent-c48] .share-button.facebook[_ngcontent-c48] {
+    background: radial-gradient(ellipse farthest-corner at center, #4267b2 30%, #3b5c9f 100%) !important;
+}
+
+.social-sharing-area[_ngcontent-c48] .share-button.copy[_ngcontent-c48] {
+    background-color: #999 !important;
+}
+
+.cdk-overlay-pane.no-padding-panel .mat-dialog-container {
+    background: none !important;
+}
+
+/* image credit */
+.confirm-dialog .message a {
+    color: var(--color6) !important;
+}
+
+/* comments' vote icons*/
+.voteButton.selected .voteIcon.up {
+    color: var(--color5) !important;
+}
+
+.voteButton.selected .voteIcon.down {
+    color: var(--color6) !important;
+}
+
+
+/* ------------------------------------------ */
+
+/* ---------------USER PROFILE--------------- */
+
+/* ------------------------------------------ */
+
+/* bg */
+.profile-avatar-card .background {
+    background-color: var(--color6) !important;
+}
+
+/* user stats illustrations */
+canvas,
+.week-actions-chart {
+    filter: var(--canvasFilter);
+}
+
+/* ------------------------------------------ */
+
+/* -----------------SETTINGS----------------- */
+
+/* ------------------------------------------ */
+
+/* options' hover animations */
+
+app-settings .action-list li:hover {
+    animation: 0.175s ease-in-out forwards scaleUp;
+}
+
+app-settings .action-list li {
+    animation: 0.175s ease-in-out forwards scaleDown;
+}
+
+/* -----------SETTINGS: CHANGE PIC----------- */
+app-profile-photo .upload-photo-screen {
+    background-image: linear-gradient(140deg, var(--color5) 0%, var(--color6) 100%) !important;
+}
+
+app-profile-photo .submit-thumbnail-area-mobile .mat-button-wrapper,
+/* -----------SETTINGS: CHANGE ACCOUNT DETAILS----------- */
+app-account-details .mat-color-secondary-text {
+    color: var(--color5) !important;
+}
+
+/* -----------SETTINGS: CHANGE PASSWORD----------- */
+app-change-password input:-webkit-autofill,
+app-change-password input:-webkit-autofill:hover,
+app-change-password input:-webkit-autofill:focus {
+
+
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* -----------SETTINGS: ABOUT APP ----------- */
+app-terms,
+app-terms h3,
+app-terms a:link,
+app-terms a:hover,
+app-terms a:visited,
+app-terms a:active,
+app-privacy a:link,
+app-privacy a:hover,
+app-privacy a:visited,
+app-privacy a:active {
+    color: var(--color6) !important;
+}
+
+/* li items animations */
+
+app-about:hover .action-list li:hover {
+    animation: 0.175s ease-in-out forwards scaleUp;
+}
+
+app-about:hover .action-list li {
+    animation: 0.175s ease-in-out forwards scaleDown;
+}
+
+/* -----------SETTINGS: CONTACT US ----------- */
+app-contact-us .page-header {
+    color: var(--color5) !important;
+}
+
+app-contact-us input:focus,
+app-contact-us button[type="submit"] {
+    background-color: var(--color6) !important;
+
+}
+/* -----------SETTINGS: DISCONNECT ----------- */
+app-confirm-dialog .mat-raised-button.mat-primary {
+    background-color: var(--color5);
+}

@@ -1,0 +1,68 @@
+<!-- 
+Copyright 2021-PRESENT StipsX
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/themes/default-palette.css" />
+  <link rel="stylesheet" href="styles/popup.css" />
+  <script src="scripts/utils.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <a title="צרו קשר" href="https://docs.google.com/forms/d/e/1FAIpQLSd_zSVerON66tvLSTAlIR0e-ueA4y4V5ueBOxb20sVwD8wTwQ/viewform?usp=sf_link" target="_blank" id="contactLink">
+      <img src="images/chat_bubble_white_24dp.svg" alt="My Happy SVG" />
+    </a>
+    <div class="appIconContainer">
+      <img id='appIcon' src="images/icon/icon.png" />
+    </div>
+  </header>
+  <div class="appTitle">
+    <h1>StipsX</h1>
+  </div>
+  <div id="popupBody">
+    <div class="themesMenuContainer">
+      <div class="themesHeader">
+        ערכת נושא
+      </div>
+      <div id="themesContainer">
+      </div>
+      <div class="themesOptionsContainer">
+        <div class="themesOption">
+          <label for="darkmode">מצב כהה</label>
+          <div class="themeOptionButton">
+            <input type="checkbox" id="darkmodeButton" name="darkmode">
+          </div>
+        </div>
+        <div class="themesOption">
+          <label for="animation">אנימציות</label>
+          <div class="themeOptionButton">
+            <input type="checkbox" id="animationsButton" name="animation">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>נוצר על ידי <a id="creatorCredit" href="https://stips.co.il/profile/295439">שפל וגאות</a></p>
+  </footer>
+  <script src="scripts/popup.js"></script>
+</body>
+
+</html>

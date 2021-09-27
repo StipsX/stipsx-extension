@@ -1,0 +1,72 @@
+{
+    "name": "StipsX",
+    "description": "StipsX is an extension created to make your experience at Stips.co.il better by spicing up the look of it.",
+    "author": "ShefelV",
+    "version": "0.0.1",
+    "version_name": "0.0.1 BETA",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "scripts/background.js"
+    },
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+F",
+                "mac": "MacCtrl+Shift+F"
+            }
+        }
+    },
+    "permissions": [
+        "storage",
+        "scripting",
+        "tabs"
+    ],
+    "host_permissions": [
+        "https://stips.co.il/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://stips.co.il/*"
+            ],
+            "css": [
+                "styles/themes/default-palette.css"
+            ],
+            "js": [
+                "scripts/utils.js",
+                "scripts/stips.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "/images/icon/icon16.png",
+            "24": "/images/icon/icon24.png",
+            "32": "/images/icon/icon32.png",
+            "48": "/images/icon/icon48.png",
+            "128": "/images/icon/icon128.png"
+        }
+    },
+    "icons": {
+        "16": "/images/icon/icon16.png",
+        "24": "/images/icon/icon24.png",
+        "32": "/images/icon/icon32.png",
+        "48": "/images/icon/icon48.png",
+        "128": "/images/icon/icon128.png"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "styles/themes/dark.css",
+                "styles/themes/bright.css",
+                "scripts/utils.js",
+                "styles/themes/disable-animations.css",
+                "palettes.json"
+            ],
+            "matches": [
+                "https://stips.co.il/*"
+            ]
+        }
+    ]
+}
