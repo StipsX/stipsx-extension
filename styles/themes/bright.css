@@ -108,13 +108,13 @@ app-spinner.loading-spinner div.bounce div {
     background-color: var(--color5) !important;
 }
 
-/* "successful login" window */ 
+/* "successful login" window */
 .login-success-screen .trigger {
     background-color: var(--color5) !important;
 }
 
 /* forgotten password panel */
-app-reset-password app-button-submit button.mat-raised-button.mat-primary{
+app-reset-password app-button-submit button.mat-raised-button.mat-primary {
     background-color: var(--color5) !important;
 }
 
@@ -207,6 +207,7 @@ app-profile-avatar .profile-avater-img-container.online:not(.online-theme-white)
     background-color: inherit;
 
 }
+
 /* the "wait to publish another message" page */
 app-blocked-action-dialog {
     background: linear-gradient(140deg, var(--color5) 0%, var(--color6) 100%) !important;
@@ -432,6 +433,19 @@ body .channel-top-unit mat-tab-group.mat-tab-group.second-navbar-tab-group .mat-
     color: var(--color6) !important;
 }
 
+/* ------------------------------------------ */
+
+/* ---------------NEW QUESTION--------------- */
+
+/* ------------------------------------------ */
+
+/* select tags */
+.ng2-tag-input.ng2-tag-input--focused {
+    border-color: var(--color6) !important;
+}
+tag-input .progress-bar:before{
+    background-color: var(--color6) !important;
+}
 
 /* ------------------------------------------ */
 
@@ -520,6 +534,7 @@ app-contact-us button[type="submit"] {
     background-color: var(--color6) !important;
 
 }
+
 /* -----------SETTINGS: DISCONNECT ----------- */
 app-confirm-dialog .mat-raised-button.mat-primary {
     background-color: var(--color5);

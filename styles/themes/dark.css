@@ -1086,6 +1086,55 @@ app-item-revisions-dialog {
     color: var(--colorE) !important;
 }
 
+/* select tags */
+input {
+    background-color: inherit !important;
+}
+.item-tags-area .input-title {
+    color: var(--color3) !important;
+}
+tag-input input,
+tag-input input::placeholder {
+    color: var(--color35) !important;
+}
+tag-input .ng2-tag-input {
+    border-color: var(--color2) !important;
+}
+tag-input tag{
+    color: var(--color35) !important;
+    background-color: var(--color2) !important;
+}
+.item-tags-area .item-tags-suggestions .tag {
+    background: var(--color2) !important;
+    color: var(--color35) !important;
+}
+tag:not(.readonly):not(.tag--editing):active,
+tag:not(:focus):not(.tag--editing):not(:active):not(.readonly):hover {
+    box-shadow: 0 2px 3px 1px var(--color21) !important;
+}
+.ng2-tag-input.ng2-tag-input--focused {
+    border-color: var(--color6) !important;
+}
+tag-input .progress-bar{
+    background-color: var(--color2) !important;
+}
+tag-input .progress-bar:before{
+    background-color: var(--color6) !important;
+}
+.ng2-dropdown-menu,
+.ng2-menu-item {
+    background-color: var(--color21) !important;
+    color: var(--color35) !important;
+}
+/* select question's image */
+app-item-gallery,
+.item-gallery {
+    background-color: var(--color21) !important;
+}
+.item-gallery .photos .photo:after {
+    border-color: var(--color21) !important;
+}
+
 /* ------------------------------------------ */
 
 /* ---------------USER PROFILE--------------- */

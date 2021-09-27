@@ -26,6 +26,7 @@ limitations under the License.
     --color6: #596bd0;
     --colorE: #f44336;
     --canvasFilter: "hue-rotate(-231deg) hue-rotate(231deg)";
+    --defaultFont: '"Varela Round"';
     /* DEBUG PALETTE*/
     /*--color1: #ff0000;
     --color2: #2bff00;
