@@ -41,7 +41,7 @@ class Utils {
         }
         else { // colorful
             resultFilter =
-                `hue-rotate(-${Utils.getHueFromHex("#596bd0")}deg) ` +
+                `sepia(100%) hue-rotate(-${Utils.getHueFromHex("#99886b")}deg) ` +
                 `hue-rotate(${targetHue}deg)`;
         }
         return resultFilter;
@@ -117,7 +117,7 @@ class Utils {
                     }
                     else { // colorful
                         resultFilter =
-                            `hue-rotate(-${getHueFromHex("#596bd0")}deg) ` +
+                            `sepia(100%) hue-rotate(-${getHueFromHex("#99886b")}deg) ` +
                             `hue-rotate(${targetHue}deg)`;
                     }
                     document.documentElement.style.setProperty("--canvasFilter", resultFilter);

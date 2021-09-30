@@ -53,7 +53,7 @@ chrome.runtime.onInstalled.addListener(() => {
                                 }
                                 else { // colorful
                                     resultFilter =
-                                        `hue-rotate(-${getHueFromHex("#596bd0")}deg) ` +
+                                        `sepia(100%) hue-rotate(-${getHueFromHex("#99886b")}deg) ` +
                                         `hue-rotate(${targetHue}deg)`;
                                 }
                                 document.documentElement.style.setProperty("--canvasFilter", resultFilter);
