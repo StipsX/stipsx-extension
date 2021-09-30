@@ -2,8 +2,8 @@
     "name": "StipsX",
     "description": "StipsX is an extension created to make your experience at Stips.co.il better by spicing up the look of it.",
     "author": "ShefelV",
-    "version": "0.0.1",
-    "version_name": "0.0.1 BETA",
+    "version": "0.0.2",
+    "version_name": "0.0.2 BETA",
     "manifest_version": 3,
     "background": {
         "service_worker": "scripts/background.js"

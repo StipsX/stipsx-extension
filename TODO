@@ -1,10 +1,6 @@
-change colors for accessibility: for example, 1st message in private chats are very hard to read in some of the themes
-
 Possible features:
 sort answers by score/reverse
 hide comments, questions and pen pals messages of blocked users
 add user tags 
 
 add some rgb theme which be sick AF
-
-The realiablity score in the user profile page turn green for some users becaude of the way the canvasFilter is Calculated
