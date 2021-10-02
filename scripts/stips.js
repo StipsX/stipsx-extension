@@ -14,8 +14,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 // activate darkmode if enabled
-chrome.storage.sync.get("darkmodeEnabled", ({ darkmodeEnabled }) => {
-    Utils.applyThemeToPage(darkmodeEnabled);
+chrome.storage.sync.get(["darkmodeEnabled","colorSettings"], (config) => {
+	Utils.applyThemeToPage(config);
 });
 chrome.storage.sync.get("animationsEnabled", ({ animationsEnabled }) => {
     Utils.toggleAnimationsOnStips(animationsEnabled);

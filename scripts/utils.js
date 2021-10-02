@@ -21,6 +21,10 @@ class Utils {
 
     static COLOR_PALETTES_JSON = "../palettes.json";
 
+    static rgbToHex = function (rgb) {
+        return `#${rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/).slice(1).map(n => parseInt(n, 10).toString(16).padStart(2, '0')).join('')}`;
+    };
+
     static getHueFromHex = function (hexString) {
         hexString = hexString.slice(hexString.search('#') + 1);
         let r = parseInt(hexString.slice(0, 2), 16), g = parseInt(hexString.slice(2, 4), 16), b = parseInt(hexString.slice(4, 6), 16);
@@ -30,7 +34,7 @@ class Utils {
             return -1;
         }
         return Math.round(60 * (h < 0 ? h + 6 : h));
-    }
+    };
 
     // used to update canvas colors (used in the profile page, for trust score circle)
     static calculateCanvasFilter = function (colorPalette) {
@@ -56,6 +60,10 @@ class Utils {
             });
     }
 
+    static applyCustomPalette = function (color5, color6) {
+        document.documentElement.style.setProperty("--color5", color5);
+        document.documentElement.style.setProperty("--color6", color6);
+    }
     // toggle animations (on a stips tab)
     static toggleAnimationsOnStips = function (animationsEnabled) {
         if (animationsEnabled) { // enable animations
@@ -91,62 +99,50 @@ class Utils {
         }
     };
 
-    static applyThemeToPage = function (darkmodeEnabled) {
-        // apply the selected color palette
-        chrome.storage.sync.get("selectedColorPalette", ({ selectedColorPalette }) => {
-            Utils.getColorPalettes((colorPalettes) => {
-                var selectedPalette = colorPalettes[selectedColorPalette];
-                for (const color in selectedPalette) {
-                    document.documentElement.style.setProperty(color, selectedPalette[color]);
-                    // copy of Utils.calculateCanvasFilter()
-                    // when called from runtime.onInstalled(), callind Utils.*() will result in an error as it doesn't recognize Utils
-                    var getHueFromHex = function (hexString) {
-                        hexString = hexString.slice(hexString.search('#') + 1);
-                        let r = parseInt(hexString.slice(0, 2), 16), g = parseInt(hexString.slice(2, 4), 16), b = parseInt(hexString.slice(4, 6), 16);
-                        let v = Math.max(r, g, b), c = v - Math.min(r, g, b);
-                        let h = c && ((v == r) ? (g - b) / c : ((v == g) ? 2 + (b - r) / c : 4 + (r - g) / c));
-                        if (v && c / v == 0) {// if saturation is 0 - gray
-                            return -1;
-                        }
-                        return Math.round(60 * (h < 0 ? h + 6 : h));
-                    }
-                    var targetHue = getHueFromHex(selectedPalette["--color6"]);
-                    var resultFilter = null;
-                    if (targetHue == -1) { // grayscale
-                        resultFilter = "saturate(0)"; // original icon colors
-                    }
-                    else { // colorful
-                        resultFilter =
-                            `sepia(100%) hue-rotate(-${getHueFromHex("#99886b")}deg) ` +
-                            `hue-rotate(${targetHue}deg)`;
-                    }
-                    document.documentElement.style.setProperty("--canvasFilter", resultFilter);
+    static applyThemeToPage = function (config, applyMode=true) {
+        // fetch the selected color palette
+        var selectedPalette = {};
+        if (config["colorSettings"]["customPaletteEnabled"])
+            // rn it's not needed as they are the same, but they might be different in the future
+            selectedPalette = config["colorSettings"]["customPalette"]
+        else selectedPalette = config["colorSettings"]["selectedPalette"];
+
+        for (const color in selectedPalette) {
+            document.documentElement.style.setProperty(color, selectedPalette[color]);
+            // copy of Utils.calculateCanvasFilter()
+            // when called from runtime.onInstalled(), callind Utils.*() will result in an error as it doesn't recognize Utils
+            var getHueFromHex = function (hexString) {
+                hexString = hexString.slice(hexString.search('#') + 1);
+                let r = parseInt(hexString.slice(0, 2), 16), g = parseInt(hexString.slice(2, 4), 16), b = parseInt(hexString.slice(4, 6), 16);
+                let v = Math.max(r, g, b), c = v - Math.min(r, g, b);
+                let h = c && ((v == r) ? (g - b) / c : ((v == g) ? 2 + (b - r) / c : 4 + (r - g) / c));
+                if (v && c / v == 0) {// if saturation is 0 - gray
+                    return -1;
                 }
-            });
-        });
+                return Math.round(60 * (h < 0 ? h + 6 : h));
+            }
+            var targetHue = getHueFromHex(selectedPalette["--color6"]);
+            var resultFilter = null;
+            if (targetHue == -1) { // grayscale
+                resultFilter = "saturate(0)"; // original icon colors
+            }
+            else { // colorful
+                resultFilter =
+                    `sepia(100%) hue-rotate(-${getHueFromHex("#99886b")}deg) ` +
+                    `hue-rotate(${targetHue}deg)`;
+            }
+            document.documentElement.style.setProperty("--canvasFilter", resultFilter);
+        }
         // apply dark/bright mode
-        var stylePath = chrome.runtime.getURL((darkmodeEnabled) ? Utils.DARKMODE_STYLE_PATH : Utils.BRIGHTMODE_STYLE_PATH);
-        var themeLink = document.createElement("link");
-        themeLink.href = stylePath;
-        themeLink.type = "text/css";
-        themeLink.rel = "stylesheet";
-        themeLink.setAttribute("stipsx-theme-style", ""); // used to later refresh modes
+        if (applyMode) {
+            var stylePath = chrome.runtime.getURL((config["darkmodeEnabled"]) ? Utils.DARKMODE_STYLE_PATH : Utils.BRIGHTMODE_STYLE_PATH);
+            var themeLink = document.createElement("link");
+            themeLink.href = stylePath;
+            themeLink.type = "text/css";
+            themeLink.rel = "stylesheet";
+            themeLink.setAttribute("stipsx-theme-style", ""); // used to later refresh modes
 
-        document.head.appendChild(themeLink);
-
-        // // keep the theme style at the bottom of the <head> to avoid other styles overriding it
-        // var bottomThemeLink = themeLink.cloneNode();
-        // const observer = new MutationObserver(function (mutationsList, observer) {
-        //     // Use traditional 'for loops' for IE 11
-        //     for (const mutation of mutationsList) {
-        //         if (mutation.type === 'childList' && headTag.lastChild != bottomThemeLink) {
-        //             headTag.appendChild(bottomThemeLink);
-        //         }
-        //     }
-        // });
-        // observer.observe(headTag, { childList: true });
-        // // (stopping the observer for performance)
-        // // setTimeout(() => { observer.disconnect(); }, 10000);
-
+            document.head.appendChild(themeLink);
+        }
     }
 }

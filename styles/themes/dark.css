@@ -14,6 +14,11 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+
+body {
+    animation: var(--RGB-animation);
+}
+
 /* scrollbars */
 *::-webkit-scrollbar {
     width: 14px;
@@ -91,7 +96,6 @@ limitations under the License.
 html,
 body {
     background-color: var(--color1) !important;
-    animation: hueRainbow 15s linear 0s infinite normal;
 }
 
 /* screen loading rotating wheel*/
@@ -605,6 +609,9 @@ app-messages .mat-tab-body-wrapper {
     box-shadow: 1px 2px 0 var(--color2) !important;
 }
 
+.notifications-list .notification.not-viewed {
+    background-color: var(--color2) !important;
+}
 
 /* ------------------------------------------ */
 

@@ -9,7 +9,8 @@
             "--color4": "#ffffff",
             "--color5": "#09c286",
             "--color6": "#596bd0",
-            "--colorE": "#f44336"
+            "--colorE": "#f44336",
+            "--RGB-animation": "none"
         },
         {
             "--color1": "#1b1b1b",
@@ -20,7 +21,8 @@
             "--color4": "#ffffff",
             "--color5": "#3E00FF",
             "--color6": "#38d685",
-            "--colorE": "#f44336"
+            "--colorE": "#f44336",
+            "--RGB-animation": "none"
         },
         {
             "--color1": "#1b1b1b",
@@ -31,7 +33,8 @@
             "--color4": "#ffffff",
             "--color5": "#ef990d",
             "--color6": "#8f34ff",
-            "--colorE": "#f44336"
+            "--colorE": "#f44336",
+            "--RGB-animation": "none"
         },
         {
             "--color1": "#1b1b1b",
@@ -42,7 +45,8 @@
             "--color4": "#ffffff",
             "--color5": "#313131",
             "--color6": "#596bd0",
-            "--colorE": "#f44336"
+            "--colorE": "#f44336",
+            "--RGB-animation": "none"
         },
         {
             "--color1": "#071023",
@@ -53,7 +57,8 @@
             "--color4": "#ffffff",
             "--color5": "#e920b6",
             "--color6": "#1366ea",
-            "--colorE": "#f44336"
+            "--colorE": "#f44336",
+            "--RGB-animation": "none"
         },
         {
             "--color1": "#000000",
@@ -64,7 +69,8 @@
             "--color4": "#ffffff",
             "--color5": "#222222",
             "--color6": "#222222",
-            "--colorE": "#ff2818"
+            "--colorE": "#ff2818",
+            "--RGB-animation": "none"
         },
         {
             "--color1": "#09172f",
@@ -75,7 +81,8 @@
             "--color4": "#ffffff",
             "--color5": "#1DB9C3",
             "--color6": "#7027A0",
-            "--colorE": "#f44336"
+            "--colorE": "#f44336",
+            "--RGB-animation": "none"
         },
         {
             "--color1": "#1c110f",
@@ -86,7 +93,8 @@
             "--color4": "#ffffff",
             "--color5": "#e93521",
             "--color6": "#f6af09",
-            "--colorE": "#f44336"
+            "--colorE": "#f44336",
+            "--RGB-animation": "none"
         },
         {
             "--color1": "#2D2424",
@@ -97,18 +105,20 @@
             "--color4": "#ffffff",
             "--color5": "#B85C38",
             "--color6": "#c4a378",
-            "--colorE": "#f44336"
+            "--colorE": "#f44336",
+            "--RGB-animation": "none"
         },
         {
-            "--color1": "#ff0000",
-            "--color2": "#2bff00",
-            "--color21": "#00aaff",
-            "--color3": "#ff00aa",
-            "--color35": "#551bc8",
-            "--color4": "#7c1885",
-            "--color5": "#0f32e3",
-            "--color6": "#615010",
-            "--colorE": "#ffff00"
+            "--color1": "#1b1b1b",
+            "--color2": "#2c2c2c",
+            "--color21": "#252525",
+            "--color3": "#939393",
+            "--color35": "#d1d1d1",
+            "--color4": "#ffffff",
+            "--color5": "#ff0000",
+            "--color6": "#ff0000",
+            "--colorE": "#f44336",
+            "--RGB-animation": "rainbow 8s linear 0s infinite normal"
         }
     ]
 }

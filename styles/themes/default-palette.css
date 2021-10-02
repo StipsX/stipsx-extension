@@ -27,6 +27,7 @@ limitations under the License.
     --colorE: #f44336;
     --canvasFilter: "hue-rotate(-231deg) hue-rotate(231deg)";
     --defaultFont: '"Varela Round"';
+    --RGB-animation: "none";
     /* DEBUG PALETTE*/
     /*--color1: #ff0000;
     --color2: #2bff00;
@@ -37,8 +38,35 @@ limitations under the License.
     --color5: #0f32e3;
     --color6: #615010;
     --colorE: #ffff00;*/
+    /*{
+        "--color1": "#ff0000",
+        "--color2": "#2bff00",
+        "--color21": "#00aaff",
+        "--color3": "#ff00aa",
+        "--color35": "#551bc8",
+        "--color4": "#7c1885",
+        "--color5": "#0f32e3",
+        "--color6": "#615010",
+        "--colorE": "#ffff00"
+    }*/
 }
 
+/* rgb animation */
+@keyframes rainbow {
+    from {
+        filter: hue-rotate(0deg);
+    }
+
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+body {
+    animation: var(--RGB-animation);
+}
+
+/* scaleUp scaleDown animations */
 @keyframes scaleUp {
     from {
         transform: scale(1);

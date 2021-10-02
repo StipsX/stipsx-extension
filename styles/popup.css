@@ -100,7 +100,6 @@ header {
 }
 
 .themesMenuContainer {
-  border-bottom: 1px solid #d4d4d4;
   box-shadow: 0px 4px 10px 0 #0000000a;
 }
 
@@ -118,7 +117,50 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: row-reverse;
+  position: relative;
+}
 
+/* the "choosing from themes is diabled while manual color selection is enabled" */
+#themesContainer[disabled]::after {
+  content: "לא ניתן לבחור ערכת נושא כאשר האופציה \"בחירה ידנית\" מופעלת.";
+  color: white;
+  background-color: rgba(200,200,200, 0.9);
+  text-shadow: 0 0 7px rgba(0,0,0,1);
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 15px;
+  box-sizing: border-box;
+  line-height: 125%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#themesContainer:not([disabled]) + .themesOptionsContainer .customColorControls {
+  position: relative;
+}
+/*  the "manual color choice is disabled" message*/
+#themesContainer:not([disabled]) + .themesOptionsContainer .customColorControls::after {
+  content: "כבוי";
+  color: white;
+  background-color: rgba(200,200,200, 0.9);
+  text-shadow: 0 0 5px rgba(0,0,0,0.6);
+  font-size: 12px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 1000px;
 }
 
 .colorPalette.selectedPalette {
@@ -128,7 +170,6 @@ header {
 .colorPalette {
   width: 25px;
   height: 25px;
-  overflow: hidden;
   border-radius: 100%;
   margin: 6px;
   background: linear-gradient(135deg, var(--color5) 30%, var(--color6) 70%);
@@ -140,6 +181,39 @@ header {
 
 .colorPalette:not(.selectedPalette):hover {
   animation: 0.175s ease-in-out forwards expandBorder;
+}
+
+/* rgb palette animation*/
+.colorPalette:last-child {
+  animation: rainbow 3s linear 0s infinite normal;
+}
+.colorPalette:last-child:not(.selectedPalette):hover {
+  animation: 0.175s ease-in-out forwards expandBorder,rainbow 3s linear 0s infinite normal;
+}
+.colorPalette:last-child:not(.selectedPalette):hover {
+  animation: 0.175s ease-in-out forwards expandBorder,rainbow 3s linear 0s infinite normal;
+}
+.colorPalette:last-child {
+  position: relative;
+}
+.colorPalette:last-child::after {
+  content: "?";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  text-shadow: 0px 0px 2px black;
+  font-size: 17px;
+  color: white;
+  text-align: center;
+  position: absolute;
+  overflow: visible;
+  transform: translateX(1px);
 }
 
 .themesOption {
@@ -154,8 +228,24 @@ header {
   align-items: center;
 }
 
-.themesOption:nth-child(1) {
+.themesOption {
   border-bottom: 1px solid #d4d4d4;
+}
+.themesOption .themeOptionButton{
+  display: flex;
+}
+.themesOption .colorInputContainer {
+  background-color: #ff0000;
+  margin: 5px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  border-radius: 1000px;
+}
+.themesOption .colorInputContainer .colorPickerBtn {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
 }
 
 .themesOptionsContainer label {
@@ -267,7 +357,6 @@ body[darkmode] .appTitle {
 
 
 body[darkmode] .themesMenuContainer {
-  border-bottom: 1px solid var(--color2);
   box-shadow: 0px 4px 10px 0 #0000003a;
 }
 
@@ -292,14 +381,37 @@ body[darkmode] .colorPalette:not(.selectedPalette) {
 body[darkmode] .colorPalette:not(.selectedPalette):hover {
   animation: 0.175s ease-in-out forwards expandBorderDark;
 }
+/* rgb palette animation*/
+body[darkmode] .colorPalette:last-child {
+  animation: rainbow 3s linear 0s infinite normal;
+}
+body[darkmode] .colorPalette:last-child:not(.selectedPalette):hover {
+  animation: 0.175s ease-in-out forwards expandBorderDark,rainbow 3s linear 0s infinite normal;
+}
+body[darkmode] .colorPalette:last-child:not(.selectedPalette):hover {
+  animation: 0.175s ease-in-out forwards expandBorderDark,rainbow 3s linear 0s infinite normal;
+}
+
+/* the "choosing from themes is diabled while manual color selection is enabled" */
+body[darkmode] #themesContainer[disabled]::after {
+  color: var(--color3);
+  background-color: rgba(50,50,50, 0.9);
+}
+/*  the "manual color choice is disabled" message*/
+body[darkmode] #themesContainer:not([disabled]) + .themesOptionsContainer .customColorControls::after {
+  color: var(--color4);
+  background-color: var(--color3);  
+  opacity: 0.8;
+  text-shadow: 0 0 5px rgba(0,0,0,0.6);
+}
 
 body[darkmode] .themesOption {
   background-color: var(--color21);
   color: var(--color35);
 }
 
-body[darkmode] .themesOption:nth-child(1) {
-  border-bottom: 1px solid var(--color2);
+body[darkmode] .themesOption {
+  border-color: var(--color2);
 }
 
 

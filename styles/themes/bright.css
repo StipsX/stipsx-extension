@@ -14,6 +14,11 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+
+body {
+    animation: var(--RGB-animation);
+}
+
 /* override custom nick names animation */
 
 @-webkit-keyframes platform-admin-nickname-color {
@@ -63,14 +68,6 @@ limitations under the License.
     100% {
         color: var(--color6)
     }
-}
-
-/* background */
-
-html,
-body {
-
-    animation: hueRainbow 15s linear 0s infinite normal;
 }
 
 /* screen loading rotating wheel*/
